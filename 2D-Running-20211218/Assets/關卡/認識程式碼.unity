@@ -162,6 +162,26 @@ MonoBehaviour:
   blue: {r: 0, g: 0, b: 1, a: 1}
   ColorB: {r: 0.5, g: 0, b: 0.5, a: 1}
   ColorC: {r: 0, g: 0.5, b: 0.5, a: 0.5}
+  Vector2: {x: 0, y: 0}
+  V2Right: {x: 1, y: 0}
+  V2Up: {x: 0, y: 1}
+  V2One: {x: 1, y: 1}
+  vector2A: {x: 3.5, y: 9.5}
+  Key: 0
+  jump: 32
+  forward: 119
+  weapon1: 49
+  mouseL: 323
+  mouseR: 324
+  goCamer: {fileID: 0}
+  goApple: {fileID: 0}
+  goTrap: {fileID: 0}
+  goFireTrap: {fileID: 0}
+  traCar1: {fileID: 0}
+  teaCamera: {fileID: 0}
+  cam: {fileID: 0}
+  spr: {fileID: 0}
+  spr2: {fileID: 0}
 --- !u!212 &393599187
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -226,6 +246,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &705374239
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 705374241}
+  - component: {fileID: 705374240}
+  m_Layer: 0
+  m_Name: "\u8A8D\u8B58\u6578\u5B78\u7B97\u6578"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &705374240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705374239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93edbdcac0202194c94df0564d3c6342, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  a: 100
+  b: 50
+  c: 60
+  d: 5
+--- !u!4 &705374241
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705374239}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1374186179
 GameObject:
@@ -310,6 +377,49 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1430756673
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1430756675}
+  - component: {fileID: 1430756674}
+  m_Layer: 0
+  m_Name: "\u8A8D\u8B58\u4E8B\u4EF6"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1430756674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430756673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8886d5e4b19dd8f47b55ab543ddda252, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1430756675
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430756673}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1676135279
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,6 +459,26 @@ MonoBehaviour:
   blue: {r: 0, g: 0, b: 1, a: 1}
   ColorB: {r: 0.5, g: 0, b: 0.5, a: 1}
   ColorC: {r: 0, g: 0.5, b: 0.5, a: 1}
+  Vector2: {x: 0, y: 0}
+  V2Right: {x: 1, y: 0}
+  V2Up: {x: 0, y: 1}
+  V2One: {x: 1, y: 1}
+  vector2A: {x: 3.5, y: 9.5}
+  Key: 0
+  jump: 32
+  forward: 119
+  weapon1: 49
+  mouseL: 323
+  mouseR: 324
+  goCamer: {fileID: 1374186179}
+  goApple: {fileID: 4404243200676640279, guid: 5dd713e407643dd45994873c3357d45e, type: 3}
+  goTrap: {fileID: 2257876042408875889, guid: 339002c92b14346439d0dec110e62aca, type: 3}
+  goFireTrap: {fileID: 4600825662054008227, guid: 9d808109e4c8fa741bb754f9e34291b5, type: 3}
+  traCar1: {fileID: 1676135282}
+  teaCamera: {fileID: 1374186182}
+  cam: {fileID: 1374186181}
+  spr: {fileID: 1676135281}
+  spr2: {fileID: 393599187}
 --- !u!212 &1676135281
 SpriteRenderer:
   m_ObjectHideFlags: 0
