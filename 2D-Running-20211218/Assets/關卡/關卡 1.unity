@@ -10328,6 +10328,7 @@ GameObject:
   - component: {fileID: 1521007811}
   - component: {fileID: 1521007813}
   - component: {fileID: 1521007812}
+  - component: {fileID: 1521007814}
   m_Layer: 0
   m_Name: "\u4E3B\u89D2"
   m_TagString: Untagged
@@ -10456,6 +10457,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1521007814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521007808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6ca9bb89258a1344998d77c411fbc0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1.5
+  jump: 500
+  isSlide: 0
+  isDead: 0
+  parameterJump: "\u89F8\u767C\u8DF3\u8E8D"
+  parameterSlide: "\u958B\u95DC\u6ED1\u884C"
+  parameterDead: "\u89F8\u767C\u6B7B\u4EA1"
 --- !u!4 &1544192164 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4404243200676640275, guid: 5dd713e407643dd45994873c3357d45e, type: 3}

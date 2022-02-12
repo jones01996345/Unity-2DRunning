@@ -8,6 +8,7 @@ public class LearmOperator: MonoBehaviour
     public float b = 50;
     public int c = 60;
     public int d = 5;
+    public int e = 1;
 
     private void Start()
     {
@@ -22,6 +23,28 @@ public class LearmOperator: MonoBehaviour
         print("除法" + (a / b));  //2
         //餘 %
         print("餘法" + (a % b));  //0
+
+        //加一
+        // = 指定符號:先執行右邊運算再把結果指定給左邊
+        e = e +1;
+        print("e 運算結果:" + e);   // 2
+        //遞減
+        e++;
+        print("e 運算結果" + e);    // 3
+        //適用減法e--;
+        //加十
+        e = e + 10;                // 13
+        print("e 運算結果:" + e);
+        //適用加減乘除餘  += -= /= *=
+        e +=10;                    // 23
+        print("e 運算結果:" + e);
+        e -= 5;                    // 18
+        print("e 運算結果:" + e);
+        e *= 10;                   // 180
+        print("e 運算結果:" + e);
+        e /= 6;                    // 30
+        print("e 運算結果:" + e);
+
         #endregion
 
         #region 運算子:比較
