@@ -1,4 +1,5 @@
-using UnityEngine;  // 引用  Unity 引擎空間，讓我們可以使用裡面的API(倉庫)
+using UnityEngine;  
+// 引用  Unity 引擎空間，讓我們可以使用裡面的API(倉庫)
 // 類別類別名稱(必須與檔案名稱相同，大小寫必須一樣)
 public class Car : MonoBehaviour
 {

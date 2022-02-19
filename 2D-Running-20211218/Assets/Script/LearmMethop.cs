@@ -1,5 +1,5 @@
 using UnityEngine;
-/// <summary>學習方法</summary>
+/// <summary>學習方法Methop</summary>
 public class LearmMethop : MonoBehaviour
 {
     //方法語法

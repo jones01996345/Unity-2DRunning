@@ -1,7 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// ¾Ç²ß¹Bºâ¤lOperator
+/// </summary>
 public class LearmOperator: MonoBehaviour
 {
     public float a = 100;
