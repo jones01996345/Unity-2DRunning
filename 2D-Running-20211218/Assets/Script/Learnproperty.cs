@@ -2,7 +2,7 @@ using UnityEngine;
 /// <summary>
 /// 學習屬性Property
 /// </summary>
-public class Learmproperty : MonoBehaviour
+public class Learnproperty : MonoBehaviour
 {
     //屬性語法
     //修飾詞 資料類型 屬性名稱{ 存取子 }

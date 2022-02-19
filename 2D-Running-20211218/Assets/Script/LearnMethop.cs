@@ -1,6 +1,6 @@
 using UnityEngine;
 /// <summary>學習方法Methop</summary>
-public class LearmMethop : MonoBehaviour
+public class LearnMethop : MonoBehaviour
 {
     //方法語法
     //修飾詞 傳回資料類型 方法名稱 (參數)  {程式內容 陳述式 演算式}

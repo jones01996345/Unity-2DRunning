@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LearmEvent : MonoBehaviour
+public class LearnEvent : MonoBehaviour
 {
     //開始事件:
     //開始遊戲時執行此事件一次

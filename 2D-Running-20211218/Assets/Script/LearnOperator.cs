@@ -2,7 +2,7 @@ using UnityEngine;
 /// <summary>
 /// ¾Ç²ß¹Bºâ¤lOperator
 /// </summary>
-public class LearmOperator: MonoBehaviour
+public class LearnOperator: MonoBehaviour
 {
     public float a = 100;
     public float b = 50;

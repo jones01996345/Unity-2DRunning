@@ -5,7 +5,7 @@ using UnityEngine;
 /// if
 /// switch
 /// </summary>
-public class LearmCondition : MonoBehaviour
+public class LearnCondition : MonoBehaviour
 {
     public bool haskey = true;
     public int combo = 10;
