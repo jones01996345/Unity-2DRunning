@@ -36,25 +36,55 @@ public class Player : MonoBehaviour
     [Header("跳躍段數最大值"), Range(0, 5)]
     public int countJumpMax = 2;
     public int countJump;
+    [Header("檢查地板位移")]
+    public Vector3 v3GroundOffset;
+    [Header("檢查地板尺寸")]
+    public Vector3 v3GroundSize = Vector3.one;
+    [Header("地板的圖層")]
+    public LayerMask layerGround;
+    //private Animation aniold;   //舊版 動畫系統
+    //private Animator aninew;    //新版 動畫系統
+    private Animator ani;
+
+    [Header("滑行按鍵")]
+    public KeyCode KeySlide = KeyCode.DownArrow;
+
+    public CapsuleCollider2D cc2d;
+
 
     #endregion
 
 
     #region 事件
+    //繪製圖示事件:在unity內繪製輔助用的圖示，包含:線、方形、圓形幾何圖形(執行黨不會執行)
+    private void OnDrawGizmos()
+    {
+        //1決定圖示顏色
+        Gizmos.color = new Color(1, 0, 0.2f, 0.35f);
+        //2.繪製圖示
+        //圖示.繪製方體(中心點，尺寸)
+        Gizmos.DrawCube(transform.position + v3GroundOffset, v3GroundSize);
+    }
 
     private void Start()
     {
         //GetComponent<元件類型>-<>泛型，所有類型
         //取得指定元件
         rig = GetComponent<Rigidbody2D>();
+        ani = GetComponent<Animator>();
+        cc2d = GetComponent<CapsuleCollider2D>();
+        //跳躍段數 指定為 最大值
+        countJump = countJumpMax;
     }
 
     private void Update()
     {
         Run();
         Jump();
+        Slide();
     }
     #endregion
+    
 
     #region 方法
    
@@ -92,7 +122,41 @@ public class Player : MonoBehaviour
             rig.AddForce(new Vector2(0, jump));
             //跳躍的時候，跳位數減一
             countJump--;
+            //動畫.設定觸發(動畫參數名稱)
+            ani.SetTrigger(parameterJump);
         }
+        //2D碰撞=2D物理.方形覆蓋(中心點,尺寸,角度,圖層)
+        Collider2D hit = Physics2D.OverlapBox(transform.position + v3GroundOffset, v3GroundSize, 0, layerGround);
+        print("玩家的重力加速度" + rig.velocity);
+        //如果2D碰撞物件存在並且剛體的加速度Y<0(往下掉落)
+        if (hit &&rig.velocity.y<0)
+        {
+            //跳躍次數 指定 最大跳躍次數
+            countJump = countJumpMax;
+        }
+    }
+    /// <summary>
+    /// 滑行
+    /// </summary>
+    private void Slide()
+    {
+        //判斷是否滑行
+        //更新滑行動畫
+        if (Input.GetKey(KeySlide))
+        {
+            ani.SetBool(parameterSlide, true);
+            //滑行 0.2,-0.85/2,1.2
+            cc2d.offset = new Vector2(0.2f, -0.85f);
+            cc2d.size = new Vector2(2, 1.2f);
+            
+        }
+        else
+        {
+            ani.SetBool(parameterSlide, false);
+            //站立 0.2.-0.3/1.2,2.5
+        }
+        //更新滑行碰撞器
+        //站立 0.2.-0.3/1.2,2.5
 
     }
 

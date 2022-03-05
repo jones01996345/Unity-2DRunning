@@ -4193,7 +4193,7 @@ GameObject:
   - component: {fileID: 1093959154}
   - component: {fileID: 1093959153}
   - component: {fileID: 1093959152}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: "\u4E00\u822C\u5730\u677F"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9836,7 +9836,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1308941034}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.88, y: 1.15, z: -10}
+  m_LocalPosition: {x: 6.88, y: 0.28, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1521007810}
@@ -10587,7 +10587,14 @@ MonoBehaviour:
   parameterDead: "\u89F8\u767C\u6B7B\u4EA1"
   keyJump: 32
   countJumpMax: 2
-  countJump: 2
+  countJump: 0
+  v3GroundOffset: {x: 0, y: -1.6, z: 0}
+  v3GroundSize: {x: 1, y: 0.3, z: 1}
+  layerGround:
+    serializedVersion: 2
+    m_Bits: 8
+  KeySlide: 274
+  cc2d: {fileID: 0}
 --- !u!4 &1544192164 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4404243200676640275, guid: 5dd713e407643dd45994873c3357d45e, type: 3}
