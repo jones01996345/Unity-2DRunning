@@ -111,11 +111,11 @@ public class Player : MonoBehaviour
     private void Jump()
     {
         //是否按下跳躍=輸入.取得按鍵按下(指定按鍵)
-         bool intputJump=  Input.GetKeyDown(keyJump);
+         bool intputJump=Input.GetKeyDown(keyJump);
         //print("是否按下跳躍" + intputJump);
 
         //如果 按下跳躍並且跳躍段數大於零就往上跳
-        if (intputJump &&countJump>0)
+        if (intputJump&&countJump>0)
         {
             //print("跳躍");
             //剛體，添加推力(二維向量)
@@ -148,12 +148,17 @@ public class Player : MonoBehaviour
             //滑行 0.2,-0.85/2,1.2
             cc2d.offset = new Vector2(0.2f, -0.85f);
             cc2d.size = new Vector2(2, 1.2f);
+            cc2d.direction = CapsuleDirection2D.Horizontal;
             
         }
         else
         {
             ani.SetBool(parameterSlide, false);
             //站立 0.2.-0.3/1.2,2.5
+            cc2d.offset = new Vector2(0.2f, -0.3f);
+            cc2d.size = new Vector2(1.2f, 2.5f);
+            cc2d.direction = CapsuleDirection2D.Vertical;
+
         }
         //更新滑行碰撞器
         //站立 0.2.-0.3/1.2,2.5
