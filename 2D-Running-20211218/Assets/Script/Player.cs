@@ -49,9 +49,13 @@ public class Player : MonoBehaviour
     [Header("滑行按鍵")]
     public KeyCode KeySlide = KeyCode.DownArrow;
 
-    public CapsuleCollider2D cc2d;
+    private CapsuleCollider2D cc2d;
 
+    [Header("音效")]
+    public AudioClip soundJump;
+    public AudioClip soundSlide;
 
+    private AudioSource aud;
     #endregion
 
 
@@ -73,6 +77,7 @@ public class Player : MonoBehaviour
         rig = GetComponent<Rigidbody2D>();
         ani = GetComponent<Animator>();
         cc2d = GetComponent<CapsuleCollider2D>();
+        aud = GetComponent<AudioSource>();
         //跳躍段數 指定為 最大值
         countJump = countJumpMax;
     }
@@ -124,6 +129,8 @@ public class Player : MonoBehaviour
             countJump--;
             //動畫.設定觸發(動畫參數名稱)
             ani.SetTrigger(parameterJump);
+            //音效來源.撥放一次(音效，音量)
+            aud.PlayOneShot(soundJump);
         }
         //2D碰撞=2D物理.方形覆蓋(中心點,尺寸,角度,圖層)
         Collider2D hit = Physics2D.OverlapBox(transform.position + v3GroundOffset, v3GroundSize, 0, layerGround);
@@ -144,6 +151,8 @@ public class Player : MonoBehaviour
         //更新滑行動畫
         if (Input.GetKey(KeySlide))
         {
+            if (!aud.isPlaying) aud.PlayOneShot(soundSlide, 0.5f);
+
             ani.SetBool(parameterSlide, true);
             //滑行 0.2,-0.85/2,1.2
             cc2d.offset = new Vector2(0.2f, -0.85f);
